@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="460c3658-8153-49c1-89fd-c47336038939" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MEVN-boilerplate-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MEVN-boilerplate-master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AddPost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AddPost.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/mongodbConnModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/mongodbConnModule.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -159,7 +151,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
+    <option name="x" value="708" />
+    <option name="y" value="41" />
     <option name="width" value="979" />
     <option name="height" value="1040" />
   </component>
@@ -234,12 +227,12 @@
       <workItem from="1537176488503" duration="476000" />
       <workItem from="1537179287732" duration="2372000" />
       <workItem from="1537182930737" duration="1688000" />
-      <workItem from="1537202633929" duration="622000" />
+      <workItem from="1537202633929" duration="879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40022000" />
+    <option name="totallyTimeSpent" value="40279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
