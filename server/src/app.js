@@ -1,3 +1,4 @@
+// william wall
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -34,6 +35,7 @@ app.use('/rooms', express.static(path.join(__dirname, 'dist')));
 app.use('/api/room', room);
 app.use('/api/chat', chat);
 
+/* GET ALL REVIEWS */
 app.get('/reviews', (req, res) => {
     Review.find({}, 'title description', function (error, reviews) {
         if (error) { console.error(error); }
@@ -43,6 +45,7 @@ app.get('/reviews', (req, res) => {
     }).sort({_id:-1})
 })
 
+/* ADD ROOM */
 app.post('/add_review', (req, res) => {
     var db = req.db;
     var title = req.body.title;
@@ -51,7 +54,6 @@ app.post('/add_review', (req, res) => {
         title: title,
         description: description
     })
-
     new_review.save(function (error) {
         if (error) {
             console.log(error)
@@ -62,6 +64,7 @@ app.post('/add_review', (req, res) => {
     })
 })
 
+/* UPDATE REVIEW */
 app.put('/reviews/:id', (req, res) => {
     var db = req.db;
     Review.findById(req.params.id, 'title description', function (error, review) {
@@ -80,6 +83,7 @@ app.put('/reviews/:id', (req, res) => {
     })
 })
 
+/* DELETE REVIEW */
 app.delete('/reviews/:id', (req, res) => {
     var db = req.db;
     Review.remove({
@@ -93,6 +97,7 @@ app.delete('/reviews/:id', (req, res) => {
     })
 })
 
+/* GET REVIEW BY SINGLE ID */
 app.get('/review/:id', (req, res) => {
     var db = req.db;
     Review.findById(req.params.id, 'title description', function (error, review) {
@@ -100,9 +105,6 @@ app.get('/review/:id', (req, res) => {
         res.send(review)
     })
 })
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
