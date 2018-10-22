@@ -40,7 +40,7 @@ export default {
       evt.preventDefault()
       this.chat.room = this.$route.params.id
       this.chat.message = this.chat.nickname + ' join the room'
-      axios.post(`https://frozen-earth-21625.herokuapp.com/api/chat`, this.chat)
+      axios.post(`http://localhost:8081/api/chat`, this.chat)
       .then(response => {
         this.socket.emit('save-message', { room: this.chat.room, nickname: this.chat.nickname, message: 'Join this room', created_date: new Date() })
         this.$router.push({

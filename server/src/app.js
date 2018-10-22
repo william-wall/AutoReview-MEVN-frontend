@@ -17,15 +17,15 @@ var chat = require('../routes/chat')
 
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost:27017/MEVN-boilerplate', { useNewUrlParser: true, promiseLibrary: require('bluebird') })
-// mongodb://will:william1@ds125341.mlab.com:25341/post-app
+mongoose.connect('mongodb://william:william1@ds139193.mlab.com:39193/autoreview', { useNewUrlParser: true, promiseLibrary: require('bluebird') })
+// mongodb://localhost:27017/MEVN-boilerplate
     .then(() =>  console.log('connection succesful'))
     .catch((err) => console.error(err));
 
 const mongodb_conn_module = require('./mongodbConnModule');
 var db = mongodb_conn_module.connect();
 
-var Review = require("../models/review");
+var Review = require("../models/Review.js");
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -45,7 +45,7 @@ app.get('/reviews', (req, res) => {
     }).sort({_id:-1})
 })
 
-/* ADD ROOM */
+/* ADD REVIEW */
 app.post('/add_review', (req, res) => {
     var db = req.db;
     var title = req.body.title;

@@ -14,6 +14,7 @@
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.1",
     "boom": "^7.2.0",
+    "chai-things": "^0.2.0",
     "cors": "^2.8.4",
     "del": "^2.2.2",
     "ejs": "^2.5.7",
@@ -21,6 +22,7 @@
     "gridfs-stream": "^1.1.1",
     "hapi": "^17.3.0",
     "http-errors": "^1.7.1",
+    "lodash": "^4.17.11",
     "lokijs": "^1.4.2",
     "method-override": "^3.0.0",
     "mongoose": "^5.2.5",
@@ -34,12 +36,15 @@
     "uuid": "^3.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.1",
     "@types/boom": "^7.2.0",
     "@types/del": "^3.0.1",
     "@types/hapi": "^17.0.7",
     "@types/lokijs": "^1.5.2",
     "@types/uuid": "^3.4.3",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.17.1",
     "typescript": "^2.8.1"
   }
 }

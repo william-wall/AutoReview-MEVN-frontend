@@ -65,7 +65,7 @@ export default {
     }
   },
   created () {
-    axios.get(`https://frozen-earth-21625.herokuapp.com/api/chat/` + this.$route.params.id)
+    axios.get(`http://localhost:8081/api/chat/` + this.$route.params.id)
     .then(response => {
       this.chats = response.data
     })
@@ -90,7 +90,7 @@ export default {
       evt.preventDefault()
       this.chat.room = this.$route.params.id
       this.chat.nickname = this.$route.params.nickname
-      axios.post(`https://frozen-earth-21625.herokuapp.com/api/chat`, this.chat)
+      axios.post(`http://localhost:8081/api/chat`, this.chat)
       .then(response => {
         this.socket.emit('save-message', response.data)
         this.chat.message = ''

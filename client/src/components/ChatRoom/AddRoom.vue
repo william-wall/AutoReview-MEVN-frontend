@@ -37,7 +37,7 @@ export default {
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      axios.post(`https://frozen-earth-21625.herokuapp.com/api/room`, this.room)
+      axios.post(`http://localhost:8081/api/room`, this.room)
       .then(response => {
         this.$router.push({
           name: 'RoomList'

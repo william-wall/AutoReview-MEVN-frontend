@@ -37,7 +37,7 @@ export default {
     }
   },
   created () {
-    axios.get(`https://frozen-earth-21625.herokuapp.com/api/room`)
+    axios.get(`http://localhost:8081/api/room`)
     .then(response => {
       this.rooms = response.data
     })
