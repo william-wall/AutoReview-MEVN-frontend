@@ -65,7 +65,7 @@ app.post('/add_review', (req, res) => {
 })
 
 /* UPDATE REVIEW */
-app.put('/reviews/:id', (req, res) => {
+app.put('/update_review/:id', (req, res) => {
     var db = req.db;
     Review.findById(req.params.id, 'title description', function (error, review) {
         if (error) { console.error(error); }
@@ -84,7 +84,7 @@ app.put('/reviews/:id', (req, res) => {
 })
 
 /* DELETE REVIEW */
-app.delete('/reviews/:id', (req, res) => {
+app.delete('/delete_review/:id', (req, res) => {
     var db = req.db;
     Review.remove({
         _id: req.params.id
@@ -98,7 +98,7 @@ app.delete('/reviews/:id', (req, res) => {
 })
 
 /* GET REVIEW BY SINGLE ID */
-app.get('/review/:id', (req, res) => {
+app.get('/single_review/:id', (req, res) => {
     var db = req.db;
     Review.findById(req.params.id, 'title description', function (error, review) {
         if (error) { console.error(error); }
