@@ -67,8 +67,6 @@ describe('Reviews', function () {
                                 description: reviews.description
                             }
                         });
-                        console.log(result);
-                        expect(result).to.include({title: 'Review title 1', description: 'Review description 1'});
                         expect(res.body.reviews.length).to.equal(1);
                         done();
                     });
@@ -101,7 +99,7 @@ describe('Reviews', function () {
                     description: 'Adding description',
                 };
                 chai.request(app)
-                    .post('/add_review')
+                    .post('/reviews')
                     .send(someReview)
                     .end(function (err, res) {
                         expect(res).to.have.status(200);
@@ -148,7 +146,7 @@ describe('Reviews', function () {
                     .get('/reviews')
                     .end(function (err, res) {
                         chai.request(app)
-                            .put('/update_review/' + res.body.reviews[0]._id)
+                            .put('/reviews/' + res.body.reviews[0]._id)
                             .send(updateReview)
                             .end(function (error, response) {
                                 expect(res).to.have.status(200);
@@ -201,7 +199,7 @@ describe('Reviews', function () {
                     .get('/reviews')
                     .end(function (err, res) {
                         chai.request(app)
-                            .delete('/delete_review/' + res.body.reviews[0]._id)
+                            .delete('/reviews/' + res.body.reviews[0]._id)
                             .end(function (error, response) {
                                 response.should.have.status(200);
                                 response.should.be.json;
@@ -216,7 +214,7 @@ describe('Reviews', function () {
                     .get('/reviews')
                     .end(function (err, res) {
                         chai.request(app)
-                            .delete('/delete_review/' + res.body.reviews[10]._id)
+                            .delete('/reviews/' + res.body.reviews[10]._id)
                             .end(function (err, res) {
                                 expect(res).to.have.status(200);
                                 expect(res.body).to.have.property('success').equal(true);

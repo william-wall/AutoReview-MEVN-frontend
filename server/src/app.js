@@ -25,15 +25,15 @@ mongoose.connect('mongodb://william:william1@ds139193.mlab.com:39193/autoreview'
 const mongodb_conn_module = require('./mongodbConnModule');
 var db = mongodb_conn_module.connect();
 
-var Review = require("../models/Review.js");
+var Review = require("../models/Review");
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/rooms', express.static(path.join(__dirname, 'dist')));
-app.use('/api/room', room);
-app.use('/api/chat', chat);
+app.use('/api/rooms', room);
+app.use('/api/chats', chat);
 
 /* GET ALL REVIEWS */
 app.get('/reviews', (req, res) => {
@@ -45,8 +45,8 @@ app.get('/reviews', (req, res) => {
     }).sort({_id:-1})
 })
 
-/* ADD REVIEW */
-app.post('/add_review', (req, res) => {
+/* ADD ROOM */
+app.post('/reviews', (req, res) => {
     var db = req.db;
     var title = req.body.title;
     var description = req.body.description;
@@ -56,6 +56,7 @@ app.post('/add_review', (req, res) => {
     })
     new_review.save(function (error) {
         if (error) {
+            console.log('Review did NOT add successfully!')
             console.log(error)
         }
         res.send({
@@ -65,7 +66,7 @@ app.post('/add_review', (req, res) => {
 })
 
 /* UPDATE REVIEW */
-app.put('/update_review/:id', (req, res) => {
+app.put('/reviews/:id', (req, res) => {
     var db = req.db;
     Review.findById(req.params.id, 'title description', function (error, review) {
         if (error) { console.error(error); }
@@ -84,7 +85,7 @@ app.put('/update_review/:id', (req, res) => {
 })
 
 /* DELETE REVIEW */
-app.delete('/delete_review/:id', (req, res) => {
+app.delete('/reviews/:id', (req, res) => {
     var db = req.db;
     Review.remove({
         _id: req.params.id
@@ -98,7 +99,7 @@ app.delete('/delete_review/:id', (req, res) => {
 })
 
 /* GET REVIEW BY SINGLE ID */
-app.get('/single_review/:id', (req, res) => {
+app.get('/reviews/:id', (req, res) => {
     var db = req.db;
     Review.findById(req.params.id, 'title description', function (error, review) {
         if (error) { console.error(error); }
