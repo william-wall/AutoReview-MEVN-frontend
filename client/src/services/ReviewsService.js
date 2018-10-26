@@ -6,7 +6,7 @@ export default {
   },
 
   addReview (params) {
-    return Api().post('add_review', params)
+    return Api().post('reviews', params)
   },
 
   updateReview (params) {
