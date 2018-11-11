@@ -37,7 +37,7 @@ export default {
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      axios.post(`http://autoreview.herokuapp.com/api/rooms`, this.room)
+      axios.post(`http://localhost:8081/api/rooms`, this.room)
       .then(response => {
         this.$router.push({
           name: 'RoomList'
