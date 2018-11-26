@@ -14,7 +14,7 @@ export default {
   },
 
   getReview (params) {
-    return Api().get('review/' + params.id)
+    return Api().get('reviews/' + params.id)
   },
 
   deleteReview (id) {
