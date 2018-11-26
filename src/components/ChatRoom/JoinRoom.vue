@@ -32,7 +32,7 @@ export default {
   data () {
     return {
       chat: {},
-      socket: io('http://localhost:4000')
+      socket: io('http://localhost:8081')
     }
   },
   methods: {

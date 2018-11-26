@@ -61,7 +61,7 @@ export default {
       errors: [],
       nickname: this.$route.params.nickname,
       chat: {},
-      socket: io('http://localhost:4000')
+      socket: io('http://localhost:8081')
     }
   },
   created () {
