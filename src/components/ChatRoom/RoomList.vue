@@ -37,7 +37,7 @@ export default {
     }
   },
   created () {
-    axios.get(`http://localhost:8081/api/rooms`)
+    axios.get(`https://autoreview-backend.herokuapp.com/api/rooms`)
     .then(response => {
       this.rooms = response.data
     })
