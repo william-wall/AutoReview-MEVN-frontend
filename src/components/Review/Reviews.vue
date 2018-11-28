@@ -90,6 +90,7 @@
   .titSty{
     color: black;
     font-size: 2vw;
+    font-family: "Microsoft YaHei";
   }
   .table-wrap {
     width: 60%;

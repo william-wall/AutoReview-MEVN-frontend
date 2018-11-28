@@ -48,7 +48,8 @@ export default new Router({
     {
       path: '/game',
       name: 'Game',
-      component: Game
+      component: Game,
+      beforeEnter: AuthGuard
     },
     {
       path: '/signup',
@@ -68,7 +69,8 @@ export default new Router({
     {
       path: '/reviewlist',
       name: 'Reviews',
-      component: Reviews
+      component: Reviews,
+      beforeEnter: AuthGuard
     },
     {
       path: '/reviews/add',
