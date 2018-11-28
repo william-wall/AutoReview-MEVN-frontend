@@ -76,7 +76,7 @@
             {icon: 'add_circle', title: 'Add Review', link: '/reviews/add'},
             {icon: 'burst_mode', title: 'Gallery', link: '/gallerys'},
             {icon: 'add_a_photo', title: 'Submit Car', link: '/gallery/new'},
-            {icon: 'person', title: 'Profile', link: '/profile'}
+            {icon: 'videogame_asset', title: 'Game', link: '/game'}
           ]
         }
         return menuItems

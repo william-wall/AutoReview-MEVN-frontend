@@ -10,7 +10,9 @@ import AlertCmp from './components/Shared/Alert.vue'
 import VueSweetalert2 from 'vue-sweetalert2'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import VueResource from 'vue-resource'
 
+Vue.use(VueResource)
 Vue.use(VueSweetalert2)
 Vue.use(Vuetify)
 Vue.config.productionTip = false
