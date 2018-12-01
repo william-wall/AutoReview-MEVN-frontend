@@ -24,7 +24,7 @@
             </v-layout>
             <label class="titSty" for="reviewTitle">Review Title</label>
             <h5 class="white--text mb-0" id="reviewTitle">{{ review.title }}</h5>
-            <label class="titSty" for="comment">Comments</label>
+            <label class="titSty" for="comment">Review Comment</label>
             <h5 class="white--text mb-0" rows="10" id="comment">{{review.description}}</h5>
           </v-container>
           <router-link type="button" class="btn btn-warning" v-bind:to="{ name: 'editreview', params: { id: review._id } }">Edit</router-link>
