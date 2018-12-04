@@ -10,7 +10,8 @@
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
     "test:open": "cypress open",
-    "test": "cypress run"
+    "test": "cypress run",
+    "custom-build": "npx webpack --config build/build.js"
   },
   "dependencies": {
     "blueimp-load-image": "^2.12.2",
