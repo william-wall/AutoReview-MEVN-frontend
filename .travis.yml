@@ -5,8 +5,6 @@ node_js:
 cache:
    directories:
    - node_modules
-script:
-- npm run build
 before_script:
 - npm install -g httpserver
 - npm install cypress --save-dev
