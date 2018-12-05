@@ -2,12 +2,12 @@ dist: trusty
 language: node_js
 node_js:
 - "stable"
-cache:
-   directories:
-   - node_modules
+#cache:
+#   directories:
+#   - node_modules
 before_script:
 - npm install -g httpserver
-- npm install cypress --save-dev
+#- npm install cypress --save-dev
 - npm run build
 - cd dist && httpserver -p 8080 &
 script:
