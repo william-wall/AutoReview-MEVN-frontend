@@ -10,3 +10,10 @@ before_script:
 - npm run start &
 script:
 - npx cypress run
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  domain: autoreview-agile.firebaseapp.com
+  project: ./dist
+  on:
+     branch: master
