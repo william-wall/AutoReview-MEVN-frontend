@@ -10,7 +10,7 @@ script:
 deploy:
   provider: firebase
   token:
-    secure: "1/4CMcj0FFH80wsrRyQKVV0iKj4f3naMNUR1qRU4xdmgM"
+    secure: "Cu78b3pKcz6IjeVzFLGHT7k//Bn1vtU7BbyTrSXgNqW+FIW7rjQfJqZieO6IK3G7ibXgnDBfhStUuE34/lYG6/VLuhcVoQAWKEtuZk7SFoHzfFy+DpCk6BxqI+uJ15yOSPSXx+Ryc6TzGWIW1LheFlrmDzqGYxg+WsHYzkH+fhxlrP0+JAKqdQLkWZLWQ4adCQhVko7sFGwJiTvjMnGrn8crYR5/KSNKwa7I3kOsU1QLDB3goKmVun7Jvafr8M3Aquhiam6zpOI5mX4rxhqvt/xCgKdWK81XpOQHU64eOD54TIKUohkCZPganBydnUGeAmCIetR8Q+UcZrG8kxUZnIwynOMvgKvp2uhfKwE3nyn31Tk52HEElY8Ga56dbk0RdYfk9ZDa2ivVd6LRuUAaatfVWCOtEfu7q1cvYDN39aO+kSNnPziLtK5V/oUoL1AxagtEP7C6e2jn4JTJDAa/wHQ7azFouCvig2lgPZy310s809Ym0q8KJeYTZ8N84UaYtFhk239PzXHnTY7qOKxolHq3MihXvI5vUxt7A6tAA20riHq7uYj46IF02OJA1mLOh4qksfVReQ+zsuOHVa14vzC+8Fbx6cIUehltQiFpGLX55FVr1mIyrovUim/SyVafKbQuupi6Rx7MT9ct5PtqQgE5oB2SG5agDk1qTbozN3Y="
   skip_cleanup: true
   domain: autoreview-agile.firebaseapp.com
   project: ./dist
