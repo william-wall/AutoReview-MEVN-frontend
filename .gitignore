@@ -9,6 +9,5 @@ yarn-error.log*
 *.log
 package-lock.json
 /.firebase
-/cypress
 
 
