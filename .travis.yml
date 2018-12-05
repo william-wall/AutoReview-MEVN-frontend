@@ -7,6 +7,8 @@ before_script:
 - npm run start &
 script:
 - npx cypress run
-after_success:
-- cd dist
-- firebase deploy --token $FIREBASE_TOKEN
+deploy:
+  provider: firebase
+  token:
+    secure: "1/E0cjFYdSq8aoBbDEsJ_-Q5dAjkWTjDxMGO0MKX-OmIU"
+  project: ./dist
