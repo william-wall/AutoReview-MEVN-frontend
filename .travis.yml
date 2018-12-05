@@ -9,6 +9,8 @@ script:
 - npx cypress run
 deploy:
   provider: firebase
-  token:
-    secure: "1/E0cjFYdSq8aoBbDEsJ_-Q5dAjkWTjDxMGO0MKX-OmIU"
+  skip_cleanup: true
+  domain: autoreview-agile.firebaseapp.com
   project: ./dist
+  on:
+     branch: master
