@@ -10,7 +10,7 @@ script:
 deploy:
   provider: firebase
   token:
-      secure: "1/4CMcj0FFH80wsrRyQKVV0iKj4f3naMNUR1qRU4xdmgM"
+    secure: "1/4CMcj0FFH80wsrRyQKVV0iKj4f3naMNUR1qRU4xdmgM"
   skip_cleanup: true
   domain: autoreview-agile.firebaseapp.com
   project: ./dist
