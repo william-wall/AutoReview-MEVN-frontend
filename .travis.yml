@@ -8,4 +8,5 @@ before_script:
 script:
 - npx cypress run
 after_success:
+- cd dist
 - firebase deploy --token $FIREBASE_TOKEN
