@@ -13,6 +13,29 @@ describe("Authentication", () => {
       cy.get('.flex > .btn > .btn__content').click();
       cy.url().should('include', '/');
     });
+    describe("Error Handling - Verify Non-Duplication Email", () => {
+      it("Should give an error to the user when signing up with an email already in use", () => {
+        cy.get('[href="/signup"] > .btn__content').click();
+        cy.url().should('include', '/signup');
+        cy.get('#email').type('williamwalldeveloper@gmail.com');
+        cy.get('#password').type('testpass');
+        cy.get('#confirmPassword').type('testpass');
+        cy.get('.flex > .btn > .btn__content').click();
+        cy.get(".alert > div").should('contain', 'The email address is already in use by another account.');
+      });
+    });
+  });
+
+  describe("Reset password", () => {
+    it("Should send the user an email to reset their password via a reset link", () => {
+      cy.get('[href="/signin"] > .btn__content').click();
+      cy.url().should('include', '/signin');
+      cy.get(':nth-child(2) > .btn > .btn__content').click();
+      cy.url().should('include', '/reset');
+      cy.get('#email').type('williamwalldeveloper@gmail.com');
+      cy.get('.flex > .btn > .btn__content').click();
+      cy.url().should('include', '/');
+    });
   });
 
   describe("Sign in", () => {
@@ -26,16 +49,6 @@ describe("Authentication", () => {
     });
   });
 
-  describe("Reset password", () => {
-    it("Should send the user an email to reset their password", () => {
-      cy.get('[href="/signin"] > .btn__content').click();
-      cy.url().should('include', '/signin');
-      cy.get(':nth-child(2) > .btn > .btn__content').click();
-      cy.url().should('include', '/reset');
-      cy.get('#email').type('williamwalldeveloper@gmail.com');
-      cy.get('.flex > .btn > .btn__content').click();
-      cy.url().should('include', '/');
-    });
-  });
+
 
 });
