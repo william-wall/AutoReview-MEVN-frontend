@@ -1,0 +1,24 @@
+describe("Reviews", () => {
+
+  describe("Add Review", () => {
+    it("Should add a review to the application", () => {
+      cy.get('[href="/reviews/add"] > .btn__content').click();
+      cy.url().should('include', '/reviews/add');
+      cy.get('#title').type('This is a cypress testing title review');
+      cy.get('#description').type('This is a cypress testing description review');
+      cy.get('.primary > .btn__content').click();
+      cy.get("#swal2-content").should('contain', 'Your review has been added!');
+      cy.get('.swal2-confirm').click();
+      cy.visit("/");
+    });
+    it("Should verify the review has been added to the reviews listings", () => {
+      cy.get('[href="/reviewlist"] > .btn__content').click();
+      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review');
+      cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review');
+      cy.visit("/");
+    });
+  });
+
+});
+
+

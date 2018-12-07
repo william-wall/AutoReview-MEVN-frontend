@@ -78,7 +78,7 @@
         }).then(function () {
           ReviewsService.deleteReview(id)
           $this.$router.go({
-            path: '/reviewlist'
+            path: '/'
           })
         })
       }
