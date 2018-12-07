@@ -14,4 +14,23 @@ describe("Home Page", () => {
   it("Shows Submit Car button", () => {
     cy.get(".text-sm-left > .info > .btn__content").should('contain','Submit Car');
   });
+
+  describe("Navigation Bar - Unauthenticated", () => {
+    it("Shows the Navigation Drawer button", () => {
+      cy.get(".toolbar__side-icon > .btn__content").should('contain','menu');
+    });
+    it("Shows the Navigation Drawer Sign up button", () => {
+      cy.get(":nth-child(1) > .list__tile > .list__tile__content").should('contain','Sign up');
+    });
+    it("Shows the Navigation Drawer Sign up button", () => {
+      cy.get(":nth-child(2) > .list__tile > .list__tile__content").should('contain','Sign in');
+    });
+    it("Shows the Sign up button", () => {
+      cy.get("[href=\"/signup\"] > .btn__content").should('contain','Sign up');
+    });
+    it("Shows the Sign in button", () => {
+      cy.get("[href=\"/signin\"] > .btn__content").should('contain','Sign in');
+    });
+  });
+
 });
