@@ -14,7 +14,7 @@ describe("Authentication", () => {
       cy.url().should('include', '/');
     });
     describe("Error Handling - Verify Non-Duplication Email", () => {
-      it("Should give an error to the user when signing up with an email already in use", () => {
+      it("Should give an error message to the user when signing up with an email already in use", () => {
         cy.get('[href="/signup"] > .btn__content').click();
         cy.url().should('include', '/signup');
         cy.get('#email').type('williamwalldeveloper@gmail.com');
@@ -38,15 +38,26 @@ describe("Authentication", () => {
     });
   });
 
-  describe("Sign in", () => {
-    it("Should login the user given an email and password", () => {
+  describe("Sign in - Error Handling - Incorrect password", () => {
+    it("Should give an error message to the user when signing in with an email already in use", () => {
       cy.get('[href="/signin"] > .btn__content').click();
       cy.url().should('include', '/signin');
       cy.get('#email').type('williamwalldeveloper@gmail.com');
-      cy.get('#password').type('testpass');
+      cy.get('#password').type('incorrectPassword');
       cy.get(':nth-child(3) > :nth-child(1) > .btn > .btn__content').click();
-      cy.url().should('include', '/');
+      cy.get(".alert > div").should('contain', 'The password is invalid or the user does not have a password.');
     });
+    describe("Sign in", () => {
+      it("Should login the user given an email and password", () => {
+        cy.get('[href="/signin"] > .btn__content').click();
+        cy.url().should('include', '/signin');
+        cy.get('#email').type('williamwalldeveloper@gmail.com');
+        cy.get('#password').type('testpass');
+        cy.get(':nth-child(3) > :nth-child(1) > .btn > .btn__content').click();
+        cy.url().should('include', '/');
+      });
+    });
+
   });
 
 
