@@ -2,7 +2,7 @@
   "name": "AutoReview",
   "version": "1.0.0",
   "description": "AutoReivew MEVN Web App",
-  "author": "William Wall <William@williamwall.ie>",
+  "author": "William Wall <william@williamwall.ie>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

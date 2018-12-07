@@ -18,7 +18,25 @@ describe("Reviews", () => {
       cy.visit("/");
     });
   });
-
+  describe("Edit Review", () => {
+    it("Should edit review and verify its contents", () => {
+      cy.get('[href="/reviewlist"] > .btn__content').click();
+      cy.url().should('include', '/reviewlist');
+      cy.get(':nth-child(2) > .xs12 > .card > .btn-warning').click();
+      cy.get('#title').type(' - Updating Title');
+      cy.get('#description').type(' - Updating Description');
+      cy.get('.primary > .btn__content').click();
+      cy.get("#swal2-content").should('contain', 'Your review has been updated!');
+      cy.get('.swal2-confirm').click();
+      cy.visit("/");
+    });
+    it("Should verify the review has been updated to the reviews listings", () => {
+      cy.get('[href="/reviewlist"] > .btn__content').click();
+      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review - Updating Title');
+      cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review - Updating Description');
+      cy.visit("/");
+    });
+  });
 });
 
 
