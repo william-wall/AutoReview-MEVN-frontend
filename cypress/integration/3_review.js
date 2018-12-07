@@ -18,6 +18,7 @@ describe("Reviews", () => {
       cy.visit("/");
     });
   });
+
   describe("Edit Review", () => {
     it("Should edit review and verify its contents", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
@@ -34,6 +35,18 @@ describe("Reviews", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
       cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review - Updating Title');
       cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review - Updating Description');
+      cy.visit("/");
+    });
+  });
+
+  describe("Delete Review", () => {
+    it("Should delete review from list and verify by SweetAlert2", () => {
+      cy.get('[href="/reviewlist"] > .btn__content').click();
+      cy.url().should('include', '/reviewlist');
+      cy.get(':nth-child(2) > .xs12 > .card > .btn-danger').click();
+      cy.get("#swal2-title").should('contain', 'Are you sure?');
+      cy.get("#swal2-content").should('contain', 'You wont be able to revert this!');
+      cy.get('.swal2-confirm').click();
       cy.visit("/");
     });
   });
