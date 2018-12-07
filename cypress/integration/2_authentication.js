@@ -39,7 +39,7 @@ describe("Authentication", () => {
   });
 
   describe("Sign in - Error Handling - Incorrect password", () => {
-    it("Should give an error message to the user when signing in with an email already in use", () => {
+    it("Should give an error message to the user when signing in with an incorrect password", () => {
       cy.get('[href="/signin"] > .btn__content').click();
       cy.url().should('include', '/signin');
       cy.get('#email').type('williamwalldeveloper@gmail.com');
@@ -47,7 +47,17 @@ describe("Authentication", () => {
       cy.get(':nth-child(3) > :nth-child(1) > .btn > .btn__content').click();
       cy.get(".alert > div").should('contain', 'The password is invalid or the user does not have a password.');
     });
-    describe("Sign in", () => {
+    describe("Sign in - Error Handling - No corresponding account", () => {
+      it("Should give an error message to the user when signing in with an email already in use", () => {
+        cy.get('[href="/signin"] > .btn__content').click();
+        cy.url().should('include', '/signin');
+        cy.get('#email').type('unrecognisedAccount@gmail.com');
+        cy.get('#password').type('noAccountPassword');
+        cy.get(':nth-child(3) > :nth-child(1) > .btn > .btn__content').click();
+        cy.get(".alert > div").should('contain', 'There is no user record corresponding to this identifier. The user may have been deleted.');
+      });
+    });
+    describe("Sign in - Success", () => {
       it("Should login the user given an email and password", () => {
         cy.get('[href="/signin"] > .btn__content').click();
         cy.url().should('include', '/signin');
