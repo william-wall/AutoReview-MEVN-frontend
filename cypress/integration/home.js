@@ -66,4 +66,17 @@ describe("Home Page", () => {
     });
   });
 
+  describe("Navigation Drawer - Route Navigation", () => {
+    it("Will redirect to Sign up when link is clicked in drawer", () => {
+      cy.get('.toolbar__side-icon').click();
+      cy.get(':nth-child(1) > .list__tile > .list__tile__content').click();
+      cy.url().should('include','/signup');
+    });
+    it("Will redirect to Sign in when link is clicked in drawer", () => {
+      cy.get('.toolbar__side-icon').click();
+      cy.get(':nth-child(2) > .list__tile > .list__tile__content').click();
+      cy.url().should('include','/signin');
+    });
+  });
+
 });
