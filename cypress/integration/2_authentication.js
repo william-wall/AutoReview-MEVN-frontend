@@ -57,19 +57,16 @@ describe("Authentication", () => {
         cy.get(".alert > div").should('contain', 'There is no user record corresponding to this identifier. The user may have been deleted.');
       });
     });
-    describe("Sign in - Success", () => {
-      it("Should login the user given an email and password", () => {
-        cy.get('[href="/signin"] > .btn__content').click();
-        cy.url().should('include', '/signin');
-        cy.get('#email').type('williamwalldeveloper@gmail.com');
-        cy.get('#password').type('testpass');
-        cy.get(':nth-child(3) > :nth-child(1) > .btn > .btn__content').click();
-        cy.url().should('include', '/');
-      });
-    });
 
   });
-
-
-
+  describe("Sign in - Success", () => {
+    it("Should login the user given an email and password", () => {
+      cy.get('[href="/signin"] > .btn__content').click();
+      cy.url().should('include', '/signin');
+      cy.get('#email').type('williamwalldeveloper@gmail.com');
+      cy.get('#password').type('testpass');
+      cy.get(':nth-child(3) > :nth-child(1) > .btn > .btn__content').click();
+      cy.url().should('include', '/');
+    });
+  });
 });
