@@ -33,4 +33,21 @@ describe("Home Page", () => {
     });
   });
 
+  describe("Navigation Bar - Route Navigation", () => {
+    it("Will redirect to Sign up when link is clicked", () => {
+      cy.get('[href="/signup"] > .btn__content').click();
+      cy.url().should('include','/signup');
+    });
+    it("Will redirect to Sign in when link is clicked", () => {
+      cy.get('[href="/signin"] > .btn__content').click();
+      cy.url().should('include','/signin');
+    });
+    it("Will navigate to Reset Password from Home to Sign in to Reset Password", () => {
+      cy.get('[href="/signin"] > .btn__content').click();
+      cy.url().should('include','/signin');
+      cy.get(':nth-child(2) > .btn > .btn__content').click();
+      cy.url().should('include','/reset');
+    });
+  });
+
 });
