@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f444ca6f-32fc-497c-8fac-169fcc3e6fbd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/integration/5_chat_room.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/5_chat_room.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="5_chat_room.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cypress/integration/5_chat_room.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="60" column="82" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
+            <state relative-caret-position="289">
+              <caret line="80" column="85" selection-start-line="80" selection-start-column="85" selection-end-line="80" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -196,12 +197,12 @@
       <workItem from="1544096528837" duration="958000" />
       <workItem from="1544107121987" duration="28000" />
       <workItem from="1544217951718" duration="4703000" />
-      <workItem from="1544267322181" duration="11283000" />
+      <workItem from="1544267322181" duration="11903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57060000" />
+    <option name="totallyTimeSpent" value="57680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
@@ -494,8 +495,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cypress/integration/5_chat_room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="60" column="82" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
+        <state relative-caret-position="289">
+          <caret line="80" column="85" selection-start-line="80" selection-start-column="85" selection-end-line="80" selection-end-column="85" />
         </state>
       </provider>
     </entry>

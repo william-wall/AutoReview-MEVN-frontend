@@ -68,5 +68,19 @@ describe("Chat Rooms", () => {
     });
   });
 
+  describe("Logout of Chat Room", () => {
+    it("Should allow the User to Logout of the specific Chat Room", () => {
+      cy.url().should('include', '/chat-room');
+      cy.get("h2").should('contain', 'Chat Room');
+      cy.get('.primary-font').should('contain', 'Mr. Wall');
+      cy.get('p').should('contain', 'Mr. Wall join the room');
+      cy.get('#message').type('Hello Everyone, I am new to this group!!!');
+      cy.get('h2 > .btn').click();
+      cy.get("h2").should('contain', 'Room List');
+      cy.url().should('include', '/roomlist');
+      cy.get(':nth-child(3) > .text-black').should('contain', 'Experienced Drivers');
+    });
+  });
+
 });
 
