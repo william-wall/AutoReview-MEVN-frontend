@@ -57,6 +57,15 @@ describe("Chat Rooms", () => {
       cy.get('#message').type('Hello Everyone, I am new to this group!!!');
       cy.get('.input-group-append > .btn').click();
     });
+    describe("Verify that the Chat has been added", () => {
+      it("Should verify that the Chat has been added to the Chat Room conversation", () => {
+        cy.url().should('include', '/chat-room');
+        cy.get("h2").should('contain', 'Chat Room');
+        cy.get('.primary-font').should('contain', 'Mr. Wall');
+        cy.get('p').should('contain', 'Mr. Wall join the room');
+        cy.get(':nth-child(2) > .left > .chat-body > p').should('contain', 'Hello Everyone, I am new to this group!!!');
+      });
+    });
   });
 
 });
