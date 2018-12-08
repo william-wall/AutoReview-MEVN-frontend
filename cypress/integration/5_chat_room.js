@@ -34,10 +34,17 @@ describe("Chat Rooms", () => {
       cy.get(':nth-child(3) > [aria-colindex="3"] > .btn').click();
       cy.get("h2").should('contain', 'Join Room');
       cy.get('#fieldsetHorizontal__BV_label_').should('contain', 'Enter Nickname');
-      cy.get('#nickname').type('Mr.Wall');
+      cy.get('#nickname').type('Mr. Wall');
       cy.get('form > .btn').click();
       cy.get("h2").should('contain', 'Chat Room');
-      cy.visit("/");
+    });
+    describe("Verify the User is in the Chat Room", () => {
+      it("Should verify that the User has entered the Chat Room", () => {
+        cy.url().should('include', '/chat-room');
+        cy.get("h2").should('contain', 'Chat Room');
+        cy.get('.primary-font').should('contain', 'Mr. Wall');
+        cy.get('p').should('contain', 'Mr. Wall join the room');
+      });
     });
   });
 
