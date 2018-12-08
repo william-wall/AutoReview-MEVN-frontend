@@ -10,8 +10,22 @@ describe("Game Slider Puzzle", () => {
       cy.get('[name="width"]').clear().type('2');
       cy.get('[name="height"]').clear().type('2');
     });
-    it("", () => {
-
+    it("Should pick image", () => {
+      cy.get('h3').click();
+      // const dropEvent = {
+      //   dataTransfer: {
+      //     files: [
+      //     ],
+      //   },
+      // };
+      //
+      // cy.fixture('logo.png').then((picture) => {
+      //   return Cypress.Blob.base64StringToBlob(picture, 'image/png').then((blob) => {
+      //     dropEvent.dataTransfer.files.push(blob);
+      //   });
+      // });
+      //
+      // cy.get('#contentImg').trigger('drop', dropEvent);
     });
   });
 });

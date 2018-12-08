@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f444ca6f-32fc-497c-8fac-169fcc3e6fbd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/cypress/integration/5_chat_room.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/5_chat_room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/2_authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/3_authentication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/3_review.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/4_review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/4_gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/5_gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/5_chat_room.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/6_chat_room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/6_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/7_game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/static/js/vendor.06aae066dea0387a25a1.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/static/js/vendor.06aae066dea0387a25a1.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,47 +22,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="3_review.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/3_review.js">
+      <file leaf-file-name="4_review.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cypress/integration/4_review.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="7" lean-forward="true" selection-end-line="19" selection-end-column="7" />
+              <caret line="19" column="7" selection-end-line="19" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="5_chat_room.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/5_chat_room.js">
+      <file leaf-file-name="6_chat_room.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cypress/integration/6_chat_room.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-924">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="12" selection-end-column="20" />
+              <caret line="12" column="20" selection-start-line="4" selection-start-column="5" selection-end-line="12" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="6_game.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/6_game.js">
+      <file leaf-file-name="7_game.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cypress/integration/7_game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="527">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="4_gallery.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/4_gallery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-end-line="27" />
-            </state>
-          </provider>
+      <file leaf-file-name="2_security.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cypress/integration/2_security.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="2_authentication.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cypress/integration/2_authentication.js">
+      <file leaf-file-name="5_gallery.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cypress/integration/5_gallery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="145" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="56" selection-end-column="145" />
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -92,6 +94,7 @@
         <option value="$PROJECT_DIR$/cypress/integration/4_gallery.js" />
         <option value="$PROJECT_DIR$/cypress/integration/5_chat_room.js" />
         <option value="$PROJECT_DIR$/cypress/integration/6_game.js" />
+        <option value="$PROJECT_DIR$/src/components/Game/OptionsPane.vue" />
       </list>
     </option>
   </component>
@@ -144,6 +147,11 @@
               <item name="cypress" type="462c0819:PsiDirectoryNode" />
               <item name="integration" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -162,6 +170,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\william\Documents\SSD4\Agile Software Practice\CA_2\MEVN-web-app-autoreview\Frontend\client\cypress\fixtures" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -199,12 +212,12 @@
       <workItem from="1544096528837" duration="958000" />
       <workItem from="1544107121987" duration="28000" />
       <workItem from="1544217951718" duration="4703000" />
-      <workItem from="1544267322181" duration="13936000" />
+      <workItem from="1544267322181" duration="18270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59713000" />
+    <option name="totallyTimeSpent" value="64047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
@@ -214,11 +227,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3211382" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3211382" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -227,8 +241,27 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1774398" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3211382" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -237,37 +270,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/User/ResetPassword.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Gallery/CreateGallery.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Gallery/Gallery.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="35" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Gallery/Gallerys.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -454,17 +456,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/2_authentication.js">
+    <entry file="file://$PROJECT_DIR$/cypress/integration/3_authentication.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="56" column="145" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="56" selection-end-column="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/4_gallery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -485,26 +480,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/3_review.js">
+    <entry file="file://$PROJECT_DIR$/cypress/integration/4_review.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="7" lean-forward="true" selection-end-line="19" selection-end-column="7" />
+          <caret line="19" column="7" selection-end-line="19" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/5_chat_room.js">
+    <entry file="file://$PROJECT_DIR$/cypress/integration/6_chat_room.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-924">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="12" selection-end-column="20" />
+          <caret line="12" column="20" selection-start-line="4" selection-start-column="5" selection-end-line="12" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/6_game.js">
+    <entry file="file://$PROJECT_DIR$/src/assets/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/board.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cypress/integration/5_gallery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Game/Tile.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Game/Board.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Game/Game.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#494#521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Game/OptionsPane.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cypress/integration/7_game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cypress/integration/2_security.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
