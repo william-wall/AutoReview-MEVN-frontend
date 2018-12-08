@@ -4,6 +4,7 @@ describe("Reviews", () => {
     it("Should add a review to the application", () => {
       cy.get('[href="/reviews/add"] > .btn__content').click();
       cy.url().should('include', '/reviews/add');
+      cy.get("h4").should('contain', 'Submit a Review');
       cy.get('#title').type('This is a cypress testing title review');
       cy.get('#description').type('This is a cypress testing description review');
       cy.get('.primary > .btn__content').click();
@@ -24,6 +25,7 @@ describe("Reviews", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
       cy.url().should('include', '/reviewlist');
       cy.get(':nth-child(2) > .xs12 > .card > .btn-warning').click();
+      cy.get("h4").should('contain', 'Update a Review');
       cy.get('#title').type(' - Updating Title');
       cy.get('#description').type(' - Updating Description');
       cy.get('.primary > .btn__content').click();
@@ -45,7 +47,7 @@ describe("Reviews", () => {
       cy.url().should('include', '/reviewlist');
       cy.get('.form-control').click();
       cy.get('.form-control').type(' - Updating Title');
-      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review');
+      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', ' - Updating Title');
       cy.visit("/");
     });
   });
