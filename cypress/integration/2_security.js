@@ -32,5 +32,11 @@ describe("Security", () => {
       cy.url().should('include', '/signin');
     });
   });
+  describe("Denied Access to Game - Unauthenticated", () => {
+    it("Should not be allowed to navigate to Game without Authentication", () => {
+      cy.visit("/game");
+      cy.url().should('include', '/signin');
+    });
+  });
 
 });
