@@ -12,12 +12,19 @@ describe("Chat Rooms", () => {
       cy.get('form > .btn').click();
       cy.visit("/");
     });
-    describe("", () => {
-      it("", () => {
-
+    describe("Verify the Chat Room in Room List", () => {
+      it("Should verify that the Chat Room got added to the Room List", () => {
+        cy.get('[href="/roomlist"] > .btn__content').click();
+        cy.url().should('include', '/roomlist');
+        cy.get("h2").should('contain', 'Room List');
+        cy.get(':nth-child(3) > .text-black').should('contain', 'Experienced Drivers');
+        cy.visit("/");
       });
     });
   });
+
+
+
 
 });
 
