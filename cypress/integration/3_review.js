@@ -39,6 +39,17 @@ describe("Reviews", () => {
     });
   });
 
+  describe("Fuzzy Search", () => {
+    it("Should find a review by typing keywords into the search bar and matching to a review", () => {
+      cy.get('[href="/reviewlist"] > .btn__content').click();
+      cy.url().should('include', '/reviewlist');
+      cy.get('.form-control').click();
+      cy.get('.form-control').type(' - Updating Title');
+      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review');
+      cy.visit("/");
+    });
+  });
+
   describe("Delete Review", () => {
     it("Should delete review from list and verify by SweetAlert2", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
@@ -50,6 +61,7 @@ describe("Reviews", () => {
       cy.visit("/");
     });
   });
+
 });
 
 
