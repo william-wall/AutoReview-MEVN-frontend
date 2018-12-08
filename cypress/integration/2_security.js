@@ -14,5 +14,11 @@ describe("Security", () => {
       cy.url().should('include', '/signin');
     });
   });
+  describe("Denied Access to Add Reviews - Unauthenticated", () => {
+    it("Should not be allowed to navigate to Add Review without Authentication", () => {
+      cy.visit("/reviews/add");
+      cy.url().should('include', '/signin');
+    });
+  });
 
 });
