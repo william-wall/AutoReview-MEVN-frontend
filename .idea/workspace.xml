@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f444ca6f-32fc-497c-8fac-169fcc3e6fbd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/cypress/integration/2_security.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/2_security.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,8 +46,8 @@
       <file leaf-file-name="2_security.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cypress/integration/2_security.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+            <state relative-caret-position="419">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -115,8 +114,8 @@
         <option value="$PROJECT_DIR$/cypress/integration/5_chat_room.js" />
         <option value="$PROJECT_DIR$/cypress/integration/6_game.js" />
         <option value="$PROJECT_DIR$/src/components/Game/OptionsPane.vue" />
-        <option value="$PROJECT_DIR$/cypress/integration/2_security.js" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/cypress/integration/2_security.js" />
       </list>
     </option>
   </component>
@@ -234,12 +233,12 @@
       <workItem from="1544096528837" duration="958000" />
       <workItem from="1544107121987" duration="28000" />
       <workItem from="1544217951718" duration="4703000" />
-      <workItem from="1544267322181" duration="19670000" />
+      <workItem from="1544267322181" duration="19931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65447000" />
+    <option name="totallyTimeSpent" value="65708000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
@@ -573,8 +572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cypress/integration/2_security.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        <state relative-caret-position="419">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
