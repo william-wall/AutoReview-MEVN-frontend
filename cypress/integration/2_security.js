@@ -26,5 +26,11 @@ describe("Security", () => {
       cy.url().should('include', '/signin');
     });
   });
+  describe("Denied Access to Submit Car - Unauthenticated", () => {
+    it("Should not be allowed to navigate to Submit Car without Authentication", () => {
+      cy.visit("/gallery/new");
+      cy.url().should('include', '/signin');
+    });
+  });
 
 });
