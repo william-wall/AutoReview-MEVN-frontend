@@ -79,6 +79,7 @@ describe("Chat Rooms", () => {
       cy.get("h2").should('contain', 'Room List');
       cy.url().should('include', '/roomlist');
       cy.get(':nth-child(3) > .text-black').should('contain', 'Experienced Drivers');
+      cy.visit("/");
     });
   });
 
