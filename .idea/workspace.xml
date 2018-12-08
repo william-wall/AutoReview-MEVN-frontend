@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f444ca6f-32fc-497c-8fac-169fcc3e6fbd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/2_authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/3_authentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/3_review.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/4_review.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/4_gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/5_gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/5_chat_room.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/6_chat_room.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/6_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/7_game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/static/js/vendor.06aae066dea0387a25a1.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/static/js/vendor.06aae066dea0387a25a1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/2_security.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/2_security.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,7 +45,20 @@
       </file>
       <file leaf-file-name="2_security.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cypress/integration/2_security.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1_home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cypress/integration/1_home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-end-line="61" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="5_gallery.js" pinned="false" current-in-tab="false">
@@ -95,6 +102,7 @@
         <option value="$PROJECT_DIR$/cypress/integration/5_chat_room.js" />
         <option value="$PROJECT_DIR$/cypress/integration/6_game.js" />
         <option value="$PROJECT_DIR$/src/components/Game/OptionsPane.vue" />
+        <option value="$PROJECT_DIR$/cypress/integration/2_security.js" />
       </list>
     </option>
   </component>
@@ -212,16 +220,15 @@
       <workItem from="1544096528837" duration="958000" />
       <workItem from="1544107121987" duration="28000" />
       <workItem from="1544217951718" duration="4703000" />
-      <workItem from="1544267322181" duration="18270000" />
+      <workItem from="1544267322181" duration="19066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64047000" />
+    <option name="totallyTimeSpent" value="64843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1774398" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -232,7 +239,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3211382" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3211382" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -415,9 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/1_home.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/User/Signin.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1089">
@@ -544,8 +548,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cypress/integration/1_home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cypress/integration/2_security.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
