@@ -48,6 +48,16 @@ describe("Chat Rooms", () => {
     });
   });
 
+  describe("Add a Chat to the Chat Room", () => {
+    it("Should allow the user to add a Chat to the Chat Room", () => {
+      cy.url().should('include', '/chat-room');
+      cy.get("h2").should('contain', 'Chat Room');
+      cy.get('.primary-font').should('contain', 'Mr. Wall');
+      cy.get('p').should('contain', 'Mr. Wall join the room');
+      cy.get('#message').type('Hello Everyone, I am new to this group!!!');
+      cy.get('.input-group-append > .btn').click();
+    });
+  });
 
 });
 
