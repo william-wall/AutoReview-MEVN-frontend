@@ -8,6 +8,11 @@ describe("Security", () => {
       cy.url().should('include', '/signin');
     });
   });
-
+  describe("Denied Access to Chat Rooms - Unauthenticated", () => {
+    it("Should not be allowed to navigate to Chat Rooms without Authentication", () => {
+      cy.visit("/roomlist");
+      cy.url().should('include', '/signin');
+    });
+  });
 
 });

@@ -87,7 +87,8 @@ export default new Router({
     {
       path: '/roomlist',
       name: 'RoomList',
-      component: RoomList
+      component: RoomList,
+      beforeEnter: AuthGuard
     },
     {
       path: '/add-room',
