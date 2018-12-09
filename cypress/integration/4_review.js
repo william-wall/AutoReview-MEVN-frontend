@@ -124,7 +124,7 @@ describe("Reviews", () => {
       });
     });
     describe("Custom edit verification", () => {
-      it("Should find a review by typing keywords into the search bar and matching to a review", () => {
+      it("Should find the edited review by typing keywords into the search bar and matching to a review", () => {
         cy.get('[href="/reviewlist"] > .btn__content').click();
         cy.url().should('include', '/reviewlist');
         cy.get('.form-control').click();
@@ -147,7 +147,7 @@ describe("Reviews", () => {
   });
 
   describe("Delete Review", () => {
-    it("Should delete the last review from list and verify by SweetAlert2", () => {
+    it("Should delete the latest review from list and verify by SweetAlert2", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
       cy.url().should('include', '/reviewlist');
       cy.get(':nth-child(2) > .xs12 > .card > .btn-danger').click();
@@ -174,7 +174,7 @@ describe("Reviews", () => {
   });
 
   describe("Verify the last remaining review and delete it", () => {
-    it("Should verify the contents of the last review and delete", () => {
+    it("Should verify the contents of the last remaining review and delete", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
       cy.url().should('include', '/reviewlist');
       cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'title second review');
