@@ -28,8 +28,8 @@
       <file leaf-file-name="4_review.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cypress/integration/4_review.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+            <state relative-caret-position="43">
+              <caret line="152" column="112" selection-start-line="152" selection-start-column="112" selection-end-line="152" selection-end-column="112" />
             </state>
           </provider>
         </entry>
@@ -189,12 +189,12 @@
       <workItem from="1544351098854" duration="59000" />
       <workItem from="1544358375518" duration="17522000" />
       <workItem from="1544382122698" duration="3059000" />
-      <workItem from="1544386876230" duration="3232000" />
+      <workItem from="1544386876230" duration="3561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91310000" />
+    <option name="totallyTimeSpent" value="91639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -534,8 +534,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cypress/integration/4_review.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="43">
+          <caret line="152" column="112" selection-start-line="152" selection-start-column="112" selection-end-line="152" selection-end-column="112" />
         </state>
       </provider>
     </entry>

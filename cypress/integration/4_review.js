@@ -106,6 +106,23 @@ describe("Reviews", () => {
         cy.get('.toolbar__items > button.btn > .btn__content').click();
       });
     });
+    describe("Search for Review by Keyword in search bar and Edit", () => {
+      it("Should edit a Review based on search by keyword", () => {
+        cy.get('[href="/reviewlist"] > .btn__content').click();
+        cy.url().should('include', '/reviewlist');
+        cy.get('.form-control').click();
+        cy.get('.form-control').type('second review');
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'second review');
+        cy.get(':nth-child(2) > .xs12 > .card > .btn-warning').click();
+        cy.get("h4").should('contain', 'Update a Review');
+        cy.get('#title').type(' - Updating Second Title');
+        cy.get('#description').type(' - Updating Second Description');
+        cy.get('.primary > .btn__content').click();
+        cy.get("#swal2-content").should('contain', 'Your review has been updated!');
+        cy.get('.swal2-confirm').click();
+        cy.get('.toolbar__items > button.btn > .btn__content').click();
+      });
+    });
   });
 
   describe("Fuzzy Search - Custom", () => {
@@ -146,7 +163,18 @@ describe("Reviews", () => {
     });
   });
 
-
+  describe("Verify the last remaining review and delete it", () => {
+    it("Should verify the contents of the last review and delete", () => {
+      cy.get('[href="/reviewlist"] > .btn__content').click();
+      cy.url().should('include', '/reviewlist');
+      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'title second review');
+      cy.get(':nth-child(2) > .xs12 > .card > .btn-danger').click();
+      cy.get("#swal2-title").should('contain', 'Are you sure?');
+      cy.get("#swal2-content").should('contain', 'You wont be able to revert this!');
+      cy.get('.swal2-confirm').click();
+      cy.get('.toolbar__items > button.btn > .btn__content').click();
+    });
+  });
 });
 
 
