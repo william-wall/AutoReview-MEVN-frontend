@@ -21,16 +21,18 @@ describe("Reviews", () => {
       cy.get('.swal2-confirm').click();
       cy.get('.toolbar__items > button.btn > .btn__content').click();
     });
-    it("Should verify the review has been added to the reviews listings", () => {
-      cy.get('[href="/reviewlist"] > .btn__content').click();
-      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review');
-      cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review');
-      cy.get('.toolbar__items > button.btn > .btn__content').click();
+    describe("Add Verification", () => {
+      it("Should verify the review has been added to the reviews listings", () => {
+        cy.get('[href="/reviewlist"] > .btn__content').click();
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review');
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review');
+        cy.get('.toolbar__items > button.btn > .btn__content').click();
+      });
     });
   });
 
   describe("Edit Review", () => {
-    it("Should edit review and verify its contents", () => {
+    it("Should edit review and verify by SweetAlert2", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
       cy.url().should('include', '/reviewlist');
       cy.get(':nth-child(2) > .xs12 > .card > .btn-warning').click();
@@ -42,11 +44,13 @@ describe("Reviews", () => {
       cy.get('.swal2-confirm').click();
       cy.get('.toolbar__items > button.btn > .btn__content').click();
     });
-    it("Should verify the review has been updated to the reviews listings", () => {
-      cy.get('[href="/reviewlist"] > .btn__content').click();
-      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review - Updating Title');
-      cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review - Updating Description');
-      cy.get('.toolbar__items > button.btn > .btn__content').click();
+    describe("Edit Verification", () => {
+      it("Should verify the review has been updated to the reviews listings", () => {
+        cy.get('[href="/reviewlist"] > .btn__content').click();
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review - Updating Title');
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review - Updating Description');
+        cy.get('.toolbar__items > button.btn > .btn__content').click();
+      });
     });
   });
 
