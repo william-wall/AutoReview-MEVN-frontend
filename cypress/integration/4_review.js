@@ -16,8 +16,8 @@ describe("Reviews", () => {
         cy.get('[href="/reviews/add"] > .btn__content').click();
         cy.url().should('include', '/reviews/add');
         cy.get("h4").should('contain', 'Submit a Review');
-        cy.get('#title').type('This is a cypress testing title review');
-        cy.get('#description').type('This is a cypress testing description review');
+        cy.get('#title').type('This is a cypress testing title first review');
+        cy.get('#description').type('This is a cypress testing description first review');
         cy.get('.primary > .btn__content').click();
         cy.get("#swal2-content").should('contain', 'Your review has been added!');
         cy.get('.swal2-confirm').click();
@@ -55,8 +55,8 @@ describe("Reviews", () => {
       describe("Verify Review 1", () => {
         it("Should verify the first review has been added to the reviews listings", () => {
           cy.get('[href="/reviewlist"] > .btn__content').click();
-          cy.get(":nth-child(4) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review');
-          cy.get(":nth-child(4) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review');
+          cy.get(":nth-child(4) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title first review');
+          cy.get(":nth-child(4) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description first review');
           cy.get('.toolbar__items > button.btn > .btn__content').click();
         });
       });
@@ -120,9 +120,24 @@ describe("Reviews", () => {
   });
 
   describe("Delete Review", () => {
-    it("Should delete review from list and verify by SweetAlert2", () => {
+    it("Should delete the last review from list and verify by SweetAlert2", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
       cy.url().should('include', '/reviewlist');
+      cy.get(':nth-child(2) > .xs12 > .card > .btn-danger').click();
+      cy.get("#swal2-title").should('contain', 'Are you sure?');
+      cy.get("#swal2-content").should('contain', 'You wont be able to revert this!');
+      cy.get('.swal2-confirm').click();
+      cy.get('.toolbar__items > button.btn > .btn__content').click();
+    });
+  });
+
+  describe("Custom Search and Delete by Keyword Entered in Search Bar", () => {
+    it("Should find a review by typing keywords into the search bar and then delete that review", () => {
+      cy.get('[href="/reviewlist"] > .btn__content').click();
+      cy.url().should('include', '/reviewlist');
+      cy.get('.form-control').click();
+      cy.get('.form-control').type('title first review');
+      cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'title first review');
       cy.get(':nth-child(2) > .xs12 > .card > .btn-danger').click();
       cy.get("#swal2-title").should('contain', 'Are you sure?');
       cy.get("#swal2-content").should('contain', 'You wont be able to revert this!');

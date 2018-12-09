@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f444ca6f-32fc-497c-8fac-169fcc3e6fbd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/cypress/integration/4_review.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/4_review.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/videos/4_review.js.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/videos/4_review.js.mp4" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="4_review.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cypress/integration/4_review.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="133" selection-start-line="133" selection-end-line="133" />
+            <state relative-caret-position="327">
+              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
             </state>
           </provider>
         </entry>
@@ -190,12 +189,12 @@
       <workItem from="1544351098854" duration="59000" />
       <workItem from="1544358375518" duration="17522000" />
       <workItem from="1544382122698" duration="3059000" />
-      <workItem from="1544386876230" duration="2588000" />
+      <workItem from="1544386876230" duration="3232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90666000" />
+    <option name="totallyTimeSpent" value="91310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -208,7 +207,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5071225" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4002849" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -535,8 +534,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cypress/integration/4_review.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="327">
+          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
         </state>
       </provider>
     </entry>
