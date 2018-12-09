@@ -24,11 +24,19 @@ Authentication - Users are authenticated through Googles cloud based Firebase pl
 
 ## Continuous Integration.
 
+https://travis-ci.org/william-wall/Agile_Automated_CI_MEVN_Client
+
 ## Automated Deployment.
 
 Firebase Hosting: https://autoreview-agile.firebaseapp.com/
 
 ## Extra features.
+
+Extensive testing of authenticated versus un-authenticated, navigation drawer + navigation bar only having certain elements before and after authentication.
+
+Security testing of routes, each route to application feature tested for restricted access before authentication.
+
+Verification of displayed error messages from application when incorrect password/usernames entered.
 
 ## Appendix.
 
