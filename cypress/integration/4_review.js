@@ -9,24 +9,78 @@ describe("Reviews", () => {
     cy.url().should('include', '/');
   });
 
-  describe("Add Review", () => {
-    it("Should add a review to the application", () => {
-      cy.get('[href="/reviews/add"] > .btn__content').click();
-      cy.url().should('include', '/reviews/add');
-      cy.get("h4").should('contain', 'Submit a Review');
-      cy.get('#title').type('This is a cypress testing title review');
-      cy.get('#description').type('This is a cypress testing description review');
-      cy.get('.primary > .btn__content').click();
-      cy.get("#swal2-content").should('contain', 'Your review has been added!');
-      cy.get('.swal2-confirm').click();
-      cy.get('.toolbar__items > button.btn > .btn__content').click();
-    });
-    describe("Add Verification", () => {
-      it("Should verify the review has been added to the reviews listings", () => {
-        cy.get('[href="/reviewlist"] > .btn__content').click();
-        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review');
-        cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review');
+  describe("Add 3 unique Reviews", () => {
+
+    describe("Review 1", () => {
+      it("Should add first review to the application", () => {
+        cy.get('[href="/reviews/add"] > .btn__content').click();
+        cy.url().should('include', '/reviews/add');
+        cy.get("h4").should('contain', 'Submit a Review');
+        cy.get('#title').type('This is a cypress testing title review');
+        cy.get('#description').type('This is a cypress testing description review');
+        cy.get('.primary > .btn__content').click();
+        cy.get("#swal2-content").should('contain', 'Your review has been added!');
+        cy.get('.swal2-confirm').click();
         cy.get('.toolbar__items > button.btn > .btn__content').click();
+      });
+    });
+    describe("Review 2", () => {
+      it("Should add second review to the application", () => {
+        cy.get('[href="/reviews/add"] > .btn__content').click();
+        cy.url().should('include', '/reviews/add');
+        cy.get("h4").should('contain', 'Submit a Review');
+        cy.get('#title').type('This is a cypress testing title second review');
+        cy.get('#description').type('This is a cypress testing description second review');
+        cy.get('.primary > .btn__content').click();
+        cy.get("#swal2-content").should('contain', 'Your review has been added!');
+        cy.get('.swal2-confirm').click();
+        cy.get('.toolbar__items > button.btn > .btn__content').click();
+      });
+    });
+    describe("Review 3", () => {
+      it("Should add third review to the application", () => {
+        cy.get('[href="/reviews/add"] > .btn__content').click();
+        cy.url().should('include', '/reviews/add');
+        cy.get("h4").should('contain', 'Submit a Review');
+        cy.get('#title').type('This is a cypress testing title third review');
+        cy.get('#description').type('This is a cypress testing description third review');
+        cy.get('.primary > .btn__content').click();
+        cy.get("#swal2-content").should('contain', 'Your review has been added!');
+        cy.get('.swal2-confirm').click();
+        cy.get('.toolbar__items > button.btn > .btn__content').click();
+      });
+    });
+    describe("Add Verifications", () => {
+
+      describe("Verify Review 1", () => {
+        it("Should verify the first review has been added to the reviews listings", () => {
+          cy.get('[href="/reviewlist"] > .btn__content').click();
+          cy.get(":nth-child(4) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review');
+          cy.get(":nth-child(4) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review');
+          cy.get('.toolbar__items > button.btn > .btn__content').click();
+        });
+      });
+    });
+
+    describe("Verify Review 2", () => {
+      describe("Add Verification", () => {
+        it("Should verify the second review has been added to the reviews listings", () => {
+          cy.get('[href="/reviewlist"] > .btn__content').click();
+          cy.get(":nth-child(3) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title second review');
+          cy.get(":nth-child(3) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description second review');
+          cy.get('.toolbar__items > button.btn > .btn__content').click();
+        });
+      });
+    });
+
+    describe("Verify Review 3", () => {
+      describe("Add Verification", () => {
+        it("Should verify the third review has been added to the reviews listings", () => {
+          cy.get('[href="/reviewlist"] > .btn__content').click();
+          cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title third review');
+          cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description third review');
+          cy.get('.toolbar__items > button.btn > .btn__content').click();
+        });
       });
     });
   });
@@ -47,14 +101,14 @@ describe("Reviews", () => {
     describe("Edit Verification", () => {
       it("Should verify the review has been updated to the reviews listings", () => {
         cy.get('[href="/reviewlist"] > .btn__content').click();
-        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title review - Updating Title');
-        cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description review - Updating Description');
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title third review - Updating Title');
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description third review - Updating Description');
         cy.get('.toolbar__items > button.btn > .btn__content').click();
       });
     });
   });
 
-  describe("Fuzzy Search", () => {
+  describe("Fuzzy Search - Custom", () => {
     it("Should find a review by typing keywords into the search bar and matching to a review", () => {
       cy.get('[href="/reviewlist"] > .btn__content').click();
       cy.url().should('include', '/reviewlist');
@@ -76,6 +130,7 @@ describe("Reviews", () => {
       cy.get('.toolbar__items > button.btn > .btn__content').click();
     });
   });
+
 
 });
 
