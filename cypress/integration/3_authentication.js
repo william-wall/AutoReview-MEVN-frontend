@@ -12,6 +12,7 @@ describe("Authentication", () => {
       cy.get('#confirmPassword').type('testpass');
       cy.get('.flex > .btn > .btn__content').click();
       cy.url().should('include', '/');
+      cy.get('.toolbar__items > button.btn > .btn__content').click();
     });
     describe("Error Handling - Verify Non-Duplication Email", () => {
       it("Should give an error message to the user when signing up with an email already in use", () => {
