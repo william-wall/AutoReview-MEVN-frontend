@@ -123,6 +123,16 @@ describe("Reviews", () => {
         cy.get('.toolbar__items > button.btn > .btn__content').click();
       });
     });
+    describe("Custom edit verification", () => {
+      it("Should find a review by typing keywords into the search bar and matching to a review", () => {
+        cy.get('[href="/reviewlist"] > .btn__content').click();
+        cy.url().should('include', '/reviewlist');
+        cy.get('.form-control').click();
+        cy.get('.form-control').type('Updating Second Title');
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'Updating Second Title');
+        cy.get('.toolbar__items > button.btn > .btn__content').click();
+      });
+    });
   });
 
   describe("Fuzzy Search - Custom", () => {
