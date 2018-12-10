@@ -26,7 +26,7 @@ npm run test:cypress
 
 ## Run all Cypress test suites
 
-npm run test
+npx cypress run
 
 ## Overview.
 
@@ -145,9 +145,11 @@ Firebase Hosting: https://autoreview-agile.firebaseapp.com/
 
 Extensive testing of authenticated versus un-authenticated, navigation drawer + navigation bar only having certain elements before and after authentication.
 
-Security testing of routes, each route to application feature tested for restricted access before authentication.
+Security testing of routes, each route to application feature tested for restricted access before authentication i.e. auth guard on index/router routes.
 
 Verification of displayed error messages from application when incorrect password/usernames entered.
+
+Fuzzy Custom searching based on user input and the edit/delete based on that input.
 
 ## Appendix.
 
