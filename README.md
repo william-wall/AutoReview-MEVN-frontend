@@ -1,5 +1,7 @@
 # Assignment 2 - Vue app - Automated development process. - AutoReview - Frontend -
 
+[![Build Status](https://travis-ci.org/william-wall/Agile_Automated_CI_MEVN_Client.svg?branch=master)](https://travis-ci.org/william-wall/Agile_Automated_CI_MEVN_Client)
+
 Name: William Wall
 
 Student No: 20070255
