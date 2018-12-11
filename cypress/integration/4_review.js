@@ -91,8 +91,8 @@ describe("Reviews", () => {
       cy.url().should('include', '/reviewlist');
       cy.get(':nth-child(2) > .xs12 > .card > .btn-warning').click();
       cy.get("h4").should('contain', 'Update a Review');
-      cy.get('#title').type('Updating Title');
-      cy.get('#description').type('Updating Description');
+      cy.get('#title').type(' - Updating Title');
+      cy.get('#description').type(' - Updating Description');
       cy.get('.primary > .btn__content').click();
       cy.get("#swal2-content").should('contain', 'Your review has been updated!');
       cy.get('.swal2-confirm').click();
@@ -101,8 +101,7 @@ describe("Reviews", () => {
     describe("Edit Verification", () => {
       it("Should verify the review has been updated to the reviews listings", () => {
         cy.get('[href="/reviewlist"] > .btn__content').click();
-        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'This is a cypress testing title third reviewUpdating Title');
-        cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description third reviewUpdating Description');
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'This is a cypress testing description third review - Updating Description');
         cy.get('.toolbar__items > button.btn > .btn__content').click();
       });
     });
@@ -115,8 +114,8 @@ describe("Reviews", () => {
         cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'second review');
         cy.get(':nth-child(2) > .xs12 > .card > .btn-warning').click();
         cy.get("h4").should('contain', 'Update a Review');
-        cy.get('#title').type('Updating Second Title');
-        cy.get('#description').type('Updating Second Description');
+        cy.get('#title').type(' - Updating Second Title');
+        cy.get('#description').type(' - Updating Second Description');
         cy.get('.primary > .btn__content').click();
         cy.get("#swal2-content").should('contain', 'Your review has been updated!');
         cy.get('.swal2-confirm').click();
@@ -129,7 +128,7 @@ describe("Reviews", () => {
         cy.url().should('include', '/reviewlist');
         cy.get('.form-control').click();
         cy.get('.form-control').type('Updating Second Title');
-        cy.get(":nth-child(2) > .xs12 > .card > .container > #reviewTitle").should('contain', 'Updating Second Title');
+        cy.get(":nth-child(2) > .xs12 > .card > .container > #comment").should('contain', 'Updating Second Description');
         cy.get('.toolbar__items > button.btn > .btn__content').click();
       });
     });
